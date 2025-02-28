@@ -1,9 +1,9 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Keyboard, Pagination, Navigation, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import React from 'react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Keyboard, Pagination, Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import React from "react";
 
 import pic1 from "../../assets/swp1.jpg";
 import pic2 from "../../assets/swp2.jpg";
@@ -20,19 +20,21 @@ const Services = () => {
  const images = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10];
 
  return (
-  <div className="bg-white min-h-screen p-4">
-   {/* Title Section */}
-   <div className="flex justify-center items-center p-4">
-    <h1 className="text-blue-800 font-bold text-xl md:text-3xl text-center">
-     Brain & Spine Disorders: Expert Diagnosis and Treatment
+  <div id="disease" className="  lg:min-h-screen md:h-[50vh] sm:h-[50vh] px-4">
+
+   <div className="flex justify-center items-center mb-6">
+    <h1 className="text-white font-bold text-xl p-4 sm:text-2xl md:text-3xl text-center">
+     Brain & Spine Disorders Expert Diagnosis
     </h1>
    </div>
 
-
+   {/* Swiper Carousel */}
    <Swiper
     slidesPerView={1}
     breakpoints={{
+     480: { slidesPerView: 1.2, spaceBetween: 15 },
      640: { slidesPerView: 2, spaceBetween: 20 },
+     768: { slidesPerView: 2.5, spaceBetween: 20 },
      1024: { slidesPerView: 3, spaceBetween: 30 },
     }}
     spaceBetween={20}
@@ -40,18 +42,18 @@ const Services = () => {
     pagination={{ clickable: true }}
     navigation={true}
     autoplay={{
-     delay: 3000,
+     delay: 2500,
      disableOnInteraction: false,
     }}
     modules={[Keyboard, Pagination, Navigation, Autoplay]}
     className="mySwiper"
    >
     {images.map((image, index) => (
-     <SwiperSlide key={index}>
+     <SwiperSlide key={index} className="flex justify-center items-center">
       <img
        src={image}
        alt={`Slide ${index + 1}`}
-       className="w-full sm:w-[90%] h-auto rounded-lg mx-auto"
+       className="w-full sm:w-[90%] h-auto rounded-lg shadow-lg"
       />
      </SwiperSlide>
     ))}

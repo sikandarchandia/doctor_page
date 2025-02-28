@@ -3,37 +3,39 @@ import aboutME from "../../assets/ab.png";
 
 const AboutUs = () => {
  return (
-  <div className="min-h-[80vh] flex justify-center items-center mt-7 py-12 bg-gray-900">
-   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+  <div id="about" className="min-h-screen flex justify-center items-center py-12 bg-gray-900 px-4">
+   <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
 
-    <div className="w-full md:w-1/2 space-y-6">
-     <h1 className="text-4xl lg:text-5xl font-bold text-indigo-400">
+    {/* Text Section */}
+    <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
+     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-400">
       About Me
      </h1>
-     <p className="text-gray-300 text-lg leading-relaxed">
+     <p className="text-gray-300 text-start text-base sm:text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
       I’m Asst. Prof. Dr. Hassaan Zahid, a neurosurgeon with over 10 years
       of experience in treating complex brain and spine conditions. With an
       MBBS from UHS Lahore, an FCPS in Neurosurgery, and an MS in Pediatric
       Neurosurgery, I specialize in areas such as brain tumors, spinal disc
-      herniation, cerebral palsy, and more. I provide consultations at
-      Mansoorah Hospital and Evercare Hospital in Lahore, where I’m
-      committed to delivering comprehensive, personalized care to each of
-      my patients.
+      herniation, and cerebral palsy. I provide consultations at Mansoorah
+      Hospital and Evercare Hospital in Lahore, ensuring comprehensive,
+      personalized care for my patients.
      </p>
-     <button className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-300">
-      Contact Now
-     </button>
+     <div>
+      <button className="bg-indigo-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">
+       Contact Now
+      </button>
+     </div>
     </div>
 
-
-    <div className="w-full md:w-1/2 h-[70vh]  relative">
+    {/* Image Section */}
+    <div className="w-full md:w-1/2 flex justify-center">
      <img
       src={aboutME}
       alt="Dr. Hassaan Zahid"
-      className="w-full h-full object-contain rounded-lg"
+      className="w-72 sm:w-80 md:w-96 lg:w-[28rem] h-auto object-contain rounded-lg shadow-lg"
      />
-     {/* <div className="absolute inset-0  rounded-lg transition-opacity duration-300"></div> */}
     </div>
+
    </div>
   </div>
  );
