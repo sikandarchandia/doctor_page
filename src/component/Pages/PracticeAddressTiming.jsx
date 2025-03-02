@@ -10,8 +10,8 @@ const PracticeAddressTiming = () => {
 
    {/* Table Container */}
    <div className="w-full overflow-x-auto">
-    <div className="w-full overflow-x-scroll  scrollbar-thumb-gray-700 scrollbar-track-gray-300">
-     <table className="border-collapse border border-gray-400 w-[900px] md:w-full">
+    <div className="min-w-[800px] overflow-x-auto">
+     <table className="border-collapse border border-gray-400 w-full">
       <thead>
        <tr className="bg-gray-200 text-gray-900 text-sm sm:text-base text-center">
         <th className="border border-gray-400 p-2">Hospital Name</th>
@@ -36,7 +36,7 @@ const PracticeAddressTiming = () => {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27217.725660090364!2d74.24592169977052!3d31.490754193636562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903b72ebca367%3A0x78d0e9100bc79a68!2sMustafa%20Town%2C%20Lahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1740728559035!5m2!1sen!2s"
           width="200"
           height="100"
-          className="rounded-lg"
+          className="rounded-lg w-full sm:w-[200px]"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
@@ -57,7 +57,7 @@ const PracticeAddressTiming = () => {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6808.427202795247!2d74.27821305986974!3d31.435785996581114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190116d878951d%3A0x8ff83f4a9877c5ca!2sNespak%20Housing%20Scheme%2C%20Lahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1740729825971!5m2!1sen!2s"
           width="200"
           height="100"
-          className="rounded-lg"
+          className="rounded-lg w-full sm:w-[200px]"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
@@ -68,11 +68,6 @@ const PracticeAddressTiming = () => {
       </tbody>
      </table>
     </div>
-   </div>
-
-   {/* Scroll Indicator for Mobile */}
-   <div className="mt-4 text-white text-sm sm:hidden">
-    <span>← Scroll horizontally →</span>
    </div>
   </div>
  );
